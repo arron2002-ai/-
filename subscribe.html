@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정기 구독 - NoLac Crunch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo" style="cursor:pointer;" onclick="location.href='index.html'">NoLac Crunch</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#story">Story</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="subscribe.html" class="btn-subscribe-nav">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="subscribe-page">
+        <section class="subscribe-hero">
+            <div class="container">
+                <h1>NoLac Crunch 정기 구독</h1>
+                <p>매월 원하는 맛으로, 원하는 주기에 맞춰 편하게 받아보세요!</p>
+            </div>
+        </section>
+
+        <section class="subscribe-form-section">
+            <div class="container">
+                <form class="subscribe-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('구독 신청이 완료되었습니다! 첫 달 50% 할인 혜택이 적용됩니다.'); location.href='index.html';">
+                    
+                    <!-- Step 1: 플랜 선택 -->
+                    <div class="form-step">
+                        <div class="step-header">
+                            <span class="step-number">1</span>
+                            <h2>구독 플랜 선택</h2>
+                        </div>
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="plan" value="1box" checked>
+                                <div class="card-content">
+                                    <h3>베이직 플랜 (1박스)</h3>
+                                    <p>매월 1박스 (14포) 배송</p>
+                                    <span class="price">39,000원 / 월</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="plan" value="2box">
+                                <div class="card-content">
+                                    <span class="badge choco-badge" style="position:absolute; top:-10px; right:-10px; z-index:10;">BEST</span>
+                                    <h3>프로 플랜 (2박스)</h3>
+                                    <p>매월 2박스 (28포) 배송</p>
+                                    <span class="price">72,000원 / 월</span>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="plan" value="4box">
+                                <div class="card-content">
+                                    <h3>패밀리 플랜 (4박스)</h3>
+                                    <p>매월 4박스 (56포) 배송</p>
+                                    <span class="price">135,000원 / 월</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: 맛 선택 -->
+                    <div class="form-step">
+                        <div class="step-header">
+                            <span class="step-number">2</span>
+                            <h2>맛 선택</h2>
+                        </div>
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="flavor" value="choco" checked>
+                                <div class="card-content">
+                                    <div class="flavor-icon choco-bg"></div>
+                                    <h3>초코 바나나</h3>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="flavor" value="strawberry">
+                                <div class="card-content">
+                                    <div class="flavor-icon strawberry-bg"></div>
+                                    <h3>딸기 바나나</h3>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="flavor" value="half">
+                                <div class="card-content">
+                                    <div class="flavor-icon half-bg"></div>
+                                    <h3>반반 믹스</h3>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: 배송 주기 -->
+                    <div class="form-step">
+                        <div class="step-header">
+                            <span class="step-number">3</span>
+                            <h2>배송 주기 선택</h2>
+                        </div>
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="cycle" value="2weeks" checked>
+                                <div class="card-content">
+                                    <h3>2주마다</h3>
+                                    <p>신선하게 자주 받기</p>
+                                </div>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="cycle" value="4weeks">
+                                <div class="card-content">
+                                    <h3>4주마다</h3>
+                                    <p>여유있게 한 달에 한 번</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Summary & Submit -->
+                    <div class="subscribe-summary">
+                        <h3>총 결제 예정 금액</h3>
+                        <div class="total-price">39,000<span>원</span></div>
+                        <p class="summary-note">첫 달 구독 50% 할인 혜택은 최종 결제 페이지에서 자동 적용됩니다.</p>
+                        <button type="submit" class="btn-primary large btn-submit">구독 결제하기</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand">NoLac Crunch</div>
+                <div class="links">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 NoLac Crunch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('input[name="plan"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const priceEl = document.querySelector('.total-price');
+                if (e.target.value === '1box') {
+                    priceEl.innerHTML = '39,000<span>원</span>';
+                } else if (e.target.value === '2box') {
+                    priceEl.innerHTML = '72,000<span>원</span>';
+                } else if (e.target.value === '4box') {
+                    priceEl.innerHTML = '135,000<span>원</span>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

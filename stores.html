@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매장 찾기 - NoLac Crunch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo" style="cursor:pointer;" onclick="location.href='index.html'">NoLac Crunch</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#story">Story</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="subscribe.html" class="btn-subscribe-nav">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="stores-page">
+        <section class="stores-hero">
+            <div class="container">
+                <h1>오프라인 매장 찾기</h1>
+                <p>전국 올리브영 주요 매장에서 NoLac Crunch를 만나보세요!</p>
+            </div>
+        </section>
+
+        <section class="stores-content">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" placeholder="지역명 또는 매장명을 검색해보세요. (예: 강남, 홍대)">
+                    <button class="btn-primary">검색</button>
+                </div>
+
+                <div class="stores-layout">
+                    <div class="stores-list">
+                        <div class="store-card">
+                            <h3>올리브영 강남타운점</h3>
+                            <p class="store-address">서울특별시 서초구 강남대로 429</p>
+                            <p class="store-hours">영업시간: 10:00 - 22:30</p>
+                            <span class="stock-status in-stock">재고 있음</span>
+                        </div>
+                        <div class="store-card">
+                            <h3>올리브영 명동플래그십</h3>
+                            <p class="store-address">서울특별시 중구 명동길 53</p>
+                            <p class="store-hours">영업시간: 10:00 - 22:30</p>
+                            <span class="stock-status in-stock">재고 있음</span>
+                        </div>
+                        <div class="store-card">
+                            <h3>올리브영 홍대타운점</h3>
+                            <p class="store-address">서울특별시 마포구 양화로 156</p>
+                            <p class="store-hours">영업시간: 10:00 - 22:30</p>
+                            <span class="stock-status low-stock">재고 부족</span>
+                        </div>
+                        <div class="store-card">
+                            <h3>올리브영 부산서면점</h3>
+                            <p class="store-address">부산광역시 부산진구 중앙대로 692</p>
+                            <p class="store-hours">영업시간: 10:30 - 22:00</p>
+                            <span class="stock-status in-stock">재고 있음</span>
+                        </div>
+                        <div class="store-card">
+                            <h3>올리브영 대구동성로점</h3>
+                            <p class="store-address">대구광역시 중구 동성로 25</p>
+                            <p class="store-hours">영업시간: 10:30 - 22:00</p>
+                            <span class="stock-status out-of-stock">품절</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stores-map">
+                        <!-- 지도 API가 연동될 플레이스홀더 영역 -->
+                        <div class="map-placeholder">
+                            <div class="map-icon">📍</div>
+                            <p>지도 영역입니다.</p>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">(실제 서비스에서는 카카오맵/네이버지도 API가 연동됩니다.)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand">NoLac Crunch</div>
+                <div class="links">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 NoLac Crunch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

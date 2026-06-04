@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoLac Crunch - 유당은 빼고, 바삭함은 더하다</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">NoLac Crunch</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#subscribe" class="btn-subscribe-nav">Subscribe</a></li>
+                <li><a href="#" class="cart-icon" onclick="event.preventDefault();">🛒<span class="cart-badge" style="display:none;">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. 메인 배너 -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="animate-up" style="font-size: 1.3rem; font-weight: 900; color: #fff; margin-bottom: 0.5rem; letter-spacing: 1px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">유당 제로 고단백 크런치 쉐이크</p>
+                <h1 class="animate-up delay-1">No Lactose,<br>More Crunchy</h1>
+                <p class="animate-up delay-2" style="margin-bottom: 0.5rem; font-size: 1.5rem;">유당불내증 걱정 끝! 속 편하게 채우는 25% 단백질</p>
+                <p class="animate-up delay-2" style="font-size: 1.1rem; font-weight: 400; opacity: 0.9;">물이나 우유에 흔들기만 하면 바삭한 크런치가 입안 가득 씹히는 즐거움</p>
+                <div style="margin-top: 2rem;">
+                    <a href="#products" class="btn-primary animate-up delay-2">제품 보러가기</a>
+                </div>
+            </div>
+            <!-- 배경에 역동적인 컬러 혼합 효과를 위한 오버레이 -->
+            <div class="hero-bg-overlay"></div>
+            
+            <!-- 떠다니는 딸기, 초코, 바나나 요소 -->
+            <div class="floating-elements">
+                <span class="float-item float-1">🍓</span>
+                <span class="float-item float-2">🍫</span>
+                <span class="float-item float-3">🍌</span>
+                <span class="float-item float-4">🍓</span>
+                <span class="float-item float-5">🍫</span>
+                <span class="float-item float-6">🍌</span>
+            </div>
+        </section>
+
+        <!-- 2. 브랜드 스토리 -->
+        <section id="story" class="story-section">
+            <div class="container">
+                <h2>유당불내증 안녕, 속 편한 단백질</h2>
+                <div class="story-content">
+                    <div class="story-text">
+                        <h3>Lactose-free & High Protein</h3>
+                        <p>우유만 먹으면 속이 불편하셨나요?<br>NoLac Crunch는 유당불내증 걱정 없이 누구나 맛있게 즐길 수 있는 고단백 쉐이크입니다.</p>
+                        <p>바쁜 아침, 운동 전후 언제 어디서나 간편하게 속 편안한 단백질을 채워보세요.</p>
+                    </div>
+                    <div class="story-text">
+                        <h3>Crunchy Texture</h3>
+                        <p>단순한 음료가 아닙니다. 바삭바삭 씹히는 크런치 알갱이가 먹는 즐거움을 더해줍니다.</p>
+                        <p>가루 날림 없는 파우치 형태로 물이나 우유만 넣고 흔들어주세요!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 제품 소개 -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="product-grid">
+                    <!-- 초코 바나나 -->
+                    <div class="product-card choco">
+                        <div class="product-image choco-img">
+                             <img src="이미지/초코 바나나 2.png" alt="초코 바나나 쉐이크" style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2;">
+                             <div class="crunch-effect" style="z-index: 3;"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="badge choco-badge">BEST</span>
+                            <h3>초코 바나나 쉐이크</h3>
+                            <p>진한 초코와 달콤한 바나나의 조화<br>그리고 바삭한 초코 크런치!</p>
+                            <ul class="nutrition">
+                                <li>40g</li>
+                                <li>148 kcal</li>
+                                <li>단백질 25%</li>
+                            </ul>
+                            <button class="btn-buy" onclick="addToCart('초코 바나나 쉐이크')">구매하기</button>
+                        </div>
+                    </div>
+
+                    <!-- 딸기 바나나 -->
+                    <div class="product-card strawberry">
+                        <div class="product-image strawberry-img">
+                            <img src="이미지/딸기 바나나.png" alt="딸기 바나나 쉐이크" style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2;">
+                            <div class="crunch-effect" style="z-index: 3;"></div>
+                        </div>
+                        <div class="product-info">
+                            <span class="badge strawberry-badge">NEW</span>
+                            <h3>딸기 바나나 쉐이크</h3>
+                            <p>상큼한 딸기와 부드러운 바나나,<br>딸기 크런치의 상큼한 식감!</p>
+                            <ul class="nutrition">
+                                <li>40g</li>
+                                <li>148 kcal</li>
+                                <li>단백질 25%</li>
+                            </ul>
+                            <button class="btn-buy" onclick="location.href='strawberry-banana.html'">구매하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 고객 리뷰 및 SNS -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2>Real Reviews</h2>
+                <p class="subtitle">#노락크런치 #속편한쉐이크 #바삭바삭</p>
+                <div class="review-gallery">
+                    <div class="review-item" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400') center/cover;">
+                        <div class="play-btn">▶</div>
+                        <div class="review-text">
+                            <span class="review-id">@gym_holic</span>
+                            <p class="review-quote">"퇴근 후 헬스장 락커룸에서 쓱 꺼내서 흔들면 끝! 단백질 특유의 비린맛 하나도 없고 초코칩 씹히는게 진짜 미쳤음 ㅠㅠ 내일 또 살거야 🍫"</p>
+                        </div>
+                    </div>
+                    <div class="review-item" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400') center/cover;">
+                        <div class="play-btn">▶</div>
+                        <div class="review-text">
+                            <span class="review-id">@morning_routine</span>
+                            <p class="review-quote">"아침 7시 출근길 지옥철에서 내 생명줄 🥺 라떼 먹으면 맨날 배 아팠는데 이건 속 짱 편함! 정수기 물만 넣어도 딸기우유 맛 나요 🍓"</p>
+                        </div>
+                    </div>
+                    <div class="review-item" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1526506114631-50e56cc180d2?auto=format&fit=crop&q=80&w=400') center/cover;">
+                        <div class="play-btn">▶</div>
+                        <div class="review-text">
+                            <span class="review-id">@diet_diary</span>
+                            <p class="review-quote">"미니백에도 쏙 들어가는 파우치! 한강 러닝하고 벤치에 앉아서 바삭바삭 씹어먹으면 포만감 장난 아님. 패키지 예뻐서 스토리 올리기도 좋음 📸"</p>
+                        </div>
+                    </div>
+                    <div class="review-item" style="background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1498837167922-41c53b4f05f0?auto=format&fit=crop&q=80&w=400') center/cover;">
+                        <div class="play-btn">▶</div>
+                        <div class="review-text">
+                            <span class="review-id">@office_worker</span>
+                            <p class="review-quote">"오후 4시 당 떨어질 때 탕비실에서 몰래 쉐킷쉐킷ㅋㅋ 가루날림 1도 없어서 키보드 안 더러워짐. 과자 먹고 싶을 때 크런치 씹으면서 버티는 중!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 구독 및 구매 혜택 -->
+        <section id="subscribe" class="subscribe-section">
+            <div class="container">
+                <h2>Join NoLac Crunch Members</h2>
+                <p>자사몰 전용 혜택! 정기 구독으로 매월 편리하게 만나보세요.</p>
+                <div class="benefits-box">
+                    <ul>
+                        <li>✨ 첫 달 구독 50% 할인</li>
+                        <li>🚚 언제나 무료 배송</li>
+                        <li>🎁 신제품 우선 체험 기회</li>
+                    </ul>
+                </div>
+                <button class="btn-primary large" onclick="location.href='subscribe.html'">정기 구독 시작하기</button>
+                <div class="offline-stores">
+                    <p>오프라인에서도 만날 수 있어요!</p>
+                    <button class="btn-secondary" onclick="location.href='stores.html'">올리브영 매장 찾기</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand">NoLac Crunch</div>
+                <div class="links">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 NoLac Crunch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
